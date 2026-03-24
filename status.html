@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brabant Golf</title>
+  <link rel="icon" href="https://www.nexxchange.com/mp1/images/65b8dabd48f8a600010752d3" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Status Page Specific Styles */
+    .page-hero {
+      position: relative;
+      color: white;
+      padding: 120px 3rem 80px;
+      text-align: center;
+      margin-top: 80px;
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .page-hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .page-hero p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .status-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .status-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .status-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      animation: fadeInUp 0.8s ease;
+      animation-fill-mode: both;
+      text-align: center;
+      border-top: 4px solid #0052cc;
+    }
+
+    .status-card:nth-child(1) { animation-delay: 0.1s; }
+    .status-card:nth-child(2) { animation-delay: 0.2s; }
+    .status-card:nth-child(3) { animation-delay: 0.3s; }
+    .status-card:nth-child(4) { animation-delay: 0.4s; }
+    .status-card:nth-child(5) { animation-delay: 0.5s; }
+    .status-card:nth-child(6) { animation-delay: 0.6s; }
+
+    .status-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 82, 204, 0.15);
+    }
+
+    .status-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .status-card h3 {
+      color: #1a1a1a;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    .status-value {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #0052cc;
+      margin-bottom: 0.5rem;
+    }
+
+    .status-label {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    /* Status Badge */
+    .status-badge {
+      display: inline-block;
+      padding: 0.5rem 1.2rem;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .badge-open {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+
+    .badge-closed {
+      background: #ffebee;
+      color: #c62828;
+    }
+
+    .last-updated {
+      text-align: center;
+      color: #999;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #eee;
+    }
+
+    @media (max-width: 768px) {
+      .page-hero {
+        padding: 100px 1.5rem 60px;
+      }
+
+      .page-hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .status-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .status-icon {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://www.nexxchange.com/mp1/images/65b8dabd48f8a600010752d3" alt="Brabant Golf Logo">
+      <span>Brabant Golf</span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="golflessen.html">Lessen</a>
+      <a href="events.html">Evenementen</a>
+      <a href="status.html">Status</a>
+      <a href="pricing.html">Prijzen</a>
+    </nav>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <button class="btn-signin">Sign in</button>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <h1>Status</h1>
+    <p>Realtime informatie over de beschikbaarheid van onze faciliteiten</p>
+  </section>
+
+  <!-- Status Section -->
+  <section class="status-container">
+    <div class="status-grid">
+      <!-- Baan Status -->
+      <div class="status-card">
+        <div class="status-icon">⛳</div>
+        <h3>Baan</h3>
+        <div class="status-value">OPEN</div>
+        <span class="status-badge badge-open">Active</span>
+      </div>
+
+      <!-- Greens Status -->
+      <div class="status-card">
+        <div class="status-icon">🌱</div>
+        <h3>Greens</h3>
+        <div class="status-value">Zomergreens</div>
+        <span class="status-badge badge-open">In Use</span>
+      </div>
+
+      <!-- Driving Range Status -->
+      <div class="status-card">
+        <div class="status-icon">🎯</div>
+        <h3>Driving Range</h3>
+        <div class="status-value">OPEN</div>
+        <span class="status-badge badge-open">Available</span>
+      </div>
+
+      <!-- Qualifying Status -->
+      <div class="status-card">
+        <div class="status-icon">📊</div>
+        <h3>Qualifying</h3>
+        <div class="status-value">Ja</div>
+        <span class="status-badge badge-open">Active</span>
+      </div>
+
+      <!-- Putting Green Status -->
+      <div class="status-card">
+        <div class="status-icon">🏌️</div>
+        <h3>Putting Green</h3>
+        <div class="status-value">OPEN</div>
+        <span class="status-badge badge-open">Available</span>
+      </div>
+
+      <!-- Clubhouse Status -->
+      <div class="status-card">
+        <div class="status-icon">🏛️</div>
+        <h3>Clubhuis</h3>
+        <div class="status-value">OPEN</div>
+        <span class="status-badge badge-open">Welcome</span>
+      </div>
+    </div>
+
+    <div class="last-updated">
+      <p>Laatst bijgewerkt: vandaag om 10:30 uur</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Brabant Golf</h4>
+        <p>Leer golfen op onze gezellige 9-holes baan met lage bijdrages en geen financiële participatie.</p>
+        <div class="social-links">
+          <a href="#">&copy; 2026 Brabant Golf. Golf hoeft niet duur te zijn!</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Snelle Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Evenementen</a></li>
+          <li><a href="status.html">Status</a></li>
+          <li><a href="pricing.html">Prijzen</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="golflessen.html">Golflessen</a></li>
+          <li><a href="wedstrijden.html">Wedstrijden</a></li>
+          <li><a href="about.html">Over Ons</a></li>
+          <li><a href="pricing.html">Lidmaatschappen</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Statenlaan 18, 5121 HD Rijen</p>
+        <p>0161-220076</p>
+        <p>bestuur@brabantgolf.nl</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Voor informatie bel het clubhuis tussen 11.00 en 16.00 uur: 0161-220076.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

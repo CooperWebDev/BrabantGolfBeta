@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brabant Golf</title>
+  <link rel="icon" href="https://www.nexxchange.com/mp1/images/65b8dabd48f8a600010752d3" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .page-hero {
+      position: relative;
+      background: url('https://www.brabantgolf.nl/wp-content/uploads/2020/07/cropped-Hole-3-in-het-zonnetje-scaled-1.jpg') center/cover no-repeat;
+      color: white;
+      padding: 120px 3rem 80px;
+      text-align: center;
+      margin-top: 80px;
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .page-hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .page-hero p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+      max-width: 600px;
+      margin: 0 auto;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .content-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .section-block {
+      background: white;
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .section-block h2 {
+      color: #0052cc;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 3px solid #0052cc;
+      padding-bottom: 1rem;
+    }
+
+    .section-block h3 {
+      color: #1a1a1a;
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .section-block p {
+      color: #666;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .section-block ul {
+      color: #666;
+      line-height: 1.8;
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-block li {
+      margin-bottom: 0.8rem;
+    }
+
+    .highlight-box {
+      background: #f0f4ff;
+      border-left: 4px solid #0052cc;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 5px;
+    }
+
+    .highlight-box strong {
+      color: #0052cc;
+    }
+
+    .pricing-box {
+      background: #f0f4ff;
+      border-left: 4px solid #0052cc;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 5px;
+    }
+
+    .pricing-box h4 {
+      color: #0052cc;
+      margin-bottom: 1rem;
+    }
+
+    .price-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid #e0e8ff;
+    }
+
+    .price-item:last-child {
+      border-bottom: none;
+    }
+
+    .price-item span:first-child {
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .price-item span:last-child {
+      color: #0052cc;
+      font-weight: 700;
+    }
+
+    .cta-section {
+      background: white;
+      color: #0052cc;
+      padding: 3rem 2rem;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 2rem;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .cta-section h3 {
+      color: #0052cc;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+      color: #666;
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .btn-contact {
+      padding: 1rem 2.5rem;
+      background: #0052cc;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-contact:hover {
+      background: #0041a3;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 82, 204, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .page-hero {
+        padding: 100px 1.5rem 60px;
+      }
+
+      .page-hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .section-block {
+        padding: 1.5rem;
+      }
+
+      .section-block h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://www.nexxchange.com/mp1/images/65b8dabd48f8a600010752d3" alt="Brabant Golf Logo">
+      <span>Brabant Golf</span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="golflessen.html">Lessen</a>
+      <a href="events.html">Evenementen</a>
+      <a href="status.html">Status</a>
+      <a href="pricing.html">Prijzen</a>
+    </nav>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <button class="btn-signin">Sign in</button>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <h1>Clinics & Groepseventen</h1>
+    <p>Perfect voor bedrijven, vrienden en groepen die kennis willen maken met golfen</p>
+  </section>
+
+  <!-- Content -->
+  <section class="content-container">
+    
+    <div class="section-block">
+      <h2>Clinics bij Brabant Golf</h2>
+      <p>Wil je eens kennismaken met Brabant Golf of de golfsport in het algemeen? Voor groepen vanaf 6 personen kan Brabant Golf clinics verzorgen, al of niet in combinatie met lunch, borrelhapjes of een buffet, respectievelijk barbecue.</p>
+
+      <h3>Wat is een Clinic?</h3>
+      <p>Een clinic is een begeleid groepsevenement waarbij deelnemers onder professionele begeleiding kennis kunnen maken met het golfen. Perfect voor:</p>
+      <ul>
+        <li>Bedrijfsgebeuren en team building</li>
+        <li>Vrienden- en familiegroepen</li>
+        <li>Introductie tot de golfsport</li>
+        <li>Groepsactiviteiten</li>
+      </ul>
+
+      <h3>Clinic Programma</h3>
+      <p>Onze clinics worden volledig aangepast op de wensen van uw groep. We bieden:</p>
+      <ul>
+        <li>Professionele instructie voor beginners</li>
+        <li>Oefensessies op de driving range</li>
+        <li>Introductieronde op de 9-holes baan</li>
+        <li>Gezellige sfeer en networking</li>
+      </ul>
+
+      <div class="highlight-box">
+        <strong>Groepsgrootte:</strong> Minimaal 6 personen
+      </div>
+
+      <h3>Prijzen & Opties</h3>
+      <div class="pricing-box">
+        <h4>Clinic Deelname</h4>
+        <div class="price-item">
+          <span>Clinic per persoon</span>
+          <span>€15,00</span>
+        </div>
+        <p style="margin-top: 1rem; font-size: 0.95rem; color: #666;">Voor het overige wordt apart prijsopgave gedaan voor:</p>
+        <ul style="margin-top: 0.5rem;">
+          <li>Lunch optie</li>
+          <li>Borrelhapjes</li>
+          <li>Buffet</li>
+          <li>Barbecue</li>
+        </ul>
+      </div>
+
+      <h3>Contact voor Clinics</h3>
+      <p>Voor nadere informatie over clinics kun je telefonisch contact opnemen met:</p>
+      <p><strong>Janny Slee</strong><br>
+      📞 06-50221131<br><br>
+      Bij geen gehoor kun je tijdens openingsuren van het clubhuis bellen naar:<br>
+      📞 0161-220076<br><br>
+      E-mailadres:<br>
+      ✉️ bestuur@brabantgolf.nl</p>
+
+      <div class="highlight-box">
+        <strong>Openingsuren clubhuis:</strong> Dagelijks opengesteld van 11:00 tot 16:00 uur.<br>
+        De baan en driving range zijn buiten deze tijden langer open.
+      </div>
+    </div>
+
+    <div class="cta-section">
+      <h3>Wil je een clinic organiseren?</h3>
+      <p>Neem vandaag nog contact op en organiseer een unvergettelijk groepsevenement op Brabant Golf!</p>
+      <button class="btn-contact">Clinic Aanvragen</button>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Brabant Golf</h4>
+        <p>Leer golfen op onze gezellige 9-holes baan met lage bijdrages en geen financiële participatie.</p>
+        <div class="social-links">
+          <a href="#">&copy; 2026 Brabant Golf. Golf hoeft niet duur te zijn!</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Snelle Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Evenementen</a></li>
+          <li><a href="status.html">Status</a></li>
+          <li><a href="pricing.html">Prijzen</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="golflessen.html">Golflessen</a></li>
+          <li><a href="wedstrijden.html">Wedstrijden</a></li>
+          <li><a href="about.html">Over Ons</a></li>
+          <li><a href="pricing.html">Lidmaatschappen</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Statenlaan 18, 5121 HD Rijen</p>
+        <p>0161-220076</p>
+        <p>bestuur@brabantgolf.nl</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Voor informatie bel het clubhuis tussen 11.00 en 16.00 uur: 0161-220076.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

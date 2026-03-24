@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brabant Golf</title>
+  <link rel="icon" href="https://www.nexxchange.com/mp1/images/65b8dabd48f8a600010752d3" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .page-hero {
+      position: relative;
+      background: url('https://www.brabantgolf.nl/wp-content/uploads/2020/07/cropped-Hole-3-in-het-zonnetje-scaled-1.jpg') center/cover no-repeat;
+      color: white;
+      padding: 120px 3rem 80px;
+      text-align: center;
+      margin-top: 80px;
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .page-hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .page-hero p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+      max-width: 600px;
+      margin: 0 auto;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .content-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .section-block {
+      background: white;
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .section-block h2 {
+      color: #0052cc;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 3px solid #0052cc;
+      padding-bottom: 1rem;
+    }
+
+    .section-block h3 {
+      color: #1a1a1a;
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .section-block p {
+      color: #666;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .section-block ul {
+      color: #666;
+      line-height: 1.8;
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-block li {
+      margin-bottom: 0.8rem;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .feature-card {
+      background: #f0f4ff;
+      border: 2px solid #0052cc;
+      padding: 2rem;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 82, 204, 0.2);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .feature-card h4 {
+      color: #0052cc;
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .feature-card p {
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    .highlight-box {
+      background: #f0f4ff;
+      border-left: 4px solid #0052cc;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 5px;
+    }
+
+    .highlight-box strong {
+      color: #0052cc;
+    }
+
+    @media (max-width: 768px) {
+      .page-hero {
+        padding: 100px 1.5rem 60px;
+      }
+
+      .page-hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .section-block {
+        padding: 1.5rem;
+      }
+
+      .section-block h2 {
+        font-size: 1.5rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://www.nexxchange.com/mp1/images/65b8dabd48f8a600010752d3" alt="Brabant Golf Logo">
+      <span>Brabant Golf</span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="golflessen.html">Lessen</a>
+      <a href="events.html">Evenementen</a>
+      <a href="status.html">Status</a>
+      <a href="pricing.html">Prijzen</a>
+    </nav>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <button class="btn-signin">Sign in</button>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <h1>Het Speciale van Brabant Golf</h1>
+    <p>Ontdek wat ons onderscheidt van andere golfbanen</p>
+  </section>
+
+  <!-- Content -->
+  <section class="content-container">
+    
+    <div class="section-block">
+      <h2>Wat Maakt Brabant Golf Speciaal?</h2>
+      <p>Aan de Statenlaan te Rijen ligt de golfbaan van Brabant Golf Vereniging. Gelegen aan de rand van het dorp biedt de baan een weids uitzicht over het landschap. Kenmerkend voor Brabant Golf is de kleinschaligheid en gezelligheid.</p>
+
+      <h3>De Kernwaarden van Brabant Golf</h3>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⏱️</div>
+          <h4>Snelle Rondes</h4>
+          <p>Een 9-holes ronde loop je in slechts 1 tot 1,5 uur. Perfect als je weinig tijd hebt!</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🏌️</div>
+          <h4>Vlak Terrein</h4>
+          <p>Het terrein is vlak en daarom uitermate geschikt voor iedereen, ook voor mensen die fysiek wat minder worden.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h4>Lage Kosten</h4>
+          <p>Lage contributie en gén financiële participatie. Golf hoeft niet duur te zijn!</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📅</div>
+          <h4>Vrij Spelen</h4>
+          <p>Reservering van starttijden is niet nodig. Je kunt altijd spelen!</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🎓</div>
+          <h4>Snelle Opleiding</h4>
+          <p>Professionele training naar golfbaanpermissie en handicap 54 tegen aantrekkelijke prijzen.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">☕</div>
+          <h4>Gezellig Clubhuis</h4>
+          <p>Een mooi clubhuis met goede voorzieningen, groot zonnig terras en prettige barprijzen.</p>
+        </div>
+      </div>
+
+      <h3>De 9-Holes Baan</h3>
+      <p>Brabant Golf omvat 9 holes, variërend in lengte van 65 tot 180 meter (par 3). Deze opstelling maakt de baan:</p>
+      <ul>
+        <li><strong>Perfect voor beginners:</strong> Niet te moeilijk, maar wel uitdagend genoeg</li>
+        <li><strong>Ideaal voor snelle rondes:</strong> Finish in 1-1,5 uur in plaats van 4 uur</li>
+        <li><strong>Geschikt voor iedereen:</strong> Ook voor ouderen of mensen met lichamelijke beperkingen</li>
+        <li><strong>Economisch:</strong> Je speelt 9 holes voor lagere kosten dan 18 holes elders</li>
+      </ul>
+
+      <h3>Trainingen & Faciliteiten</h3>
+      <p>Voor optimale golfopleiding beschikt Brabant Golf over uitstekende voorzieningen:</p>
+      <ul>
+        <li>Professionele golf-Pro's met gevalideerde trainingsmethoden</li>
+        <li>Driving range voor uitgebreide oefensessies</li>
+        <li>Ruime oefencorner voor specifieke technieken</li>
+        <li>Leermaterialen en oefenmateriaal (je hoeft nog niks aan te schaffen)</li>
+      </ul>
+
+      <div class="highlight-box">
+        <strong>Motto: "Golf hoeft niet duur te zijn!"</strong><br><br>
+        Dit is niet alleen een slogan, maar onze kernwaarde. We stellen alles in het werk om golf toegankelijk te maken voor iedereen, ongeacht budget of ervaring.
+      </div>
+
+      <h3>Ideaal Voor...</h3>
+      <ul>
+        <li>Beginners die golfen willen leren</li>
+        <li>Mensen met weinig tijd maar veel golflust</li>
+        <li>Gezelligheid en community feeling</li>
+        <li>Gezinnen (ouders en kinderen)</li>
+        <li>Bedrijfsgroepen en vriendenschappen</li>
+      </ul>
+
+      <h3>Na Afloop van de Opleiding</h3>
+      <p>Na het voltooien van ons trainingsprogramma heb je baanpermissie en/of EGA handicap 54. Nu kun je zelf beslissen:</p>
+      <p><strong>Wil je lid worden?</strong> Dan geniet je van alle voordelen van lidmaatschap en kun je onbeperkt spelen. Maar het is geen verplichting!</p>
+      <p><strong>Wil je flexibel blijven?</strong> Geen probleem! Je kunt blijven spelen via greenfees of strippenkaarten.</p>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Brabant Golf</h4>
+        <p>Leer golfen op onze gezellige 9-holes baan met lage bijdrages en geen financiële participatie.</p>
+        <div class="social-links">
+          <a href="#">&copy; 2026 Brabant Golf. Golf hoeft niet duur te zijn!</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Snelle Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Evenementen</a></li>
+          <li><a href="status.html">Status</a></li>
+          <li><a href="pricing.html">Prijzen</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="golflessen.html">Golflessen</a></li>
+          <li><a href="wedstrijden.html">Wedstrijden</a></li>
+          <li><a href="about.html">Over Ons</a></li>
+          <li><a href="pricing.html">Lidmaatschappen</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Statenlaan 18, 5121 HD Rijen</p>
+        <p>0161-220076</p>
+        <p>bestuur@brabantgolf.nl</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Voor informatie bel het clubhuis tussen 11.00 en 16.00 uur: 0161-220076.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

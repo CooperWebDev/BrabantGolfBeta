@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brabant Golf</title>
+  <link rel="icon" href="https://www.nexxchange.com/mp1/images/65b8dabd48f8a600010752d3" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .page-hero {
+      position: relative;
+      background: url('https://www.brabantgolf.nl/wp-content/uploads/2020/07/cropped-Hole-3-in-het-zonnetje-scaled-1.jpg') center/cover no-repeat;
+      color: white;
+      padding: 120px 3rem 80px;
+      text-align: center;
+      margin-top: 80px;
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .page-hero h1,
+    .page-hero p {
+      position: relative;
+      z-index: 2;
+    }
+
+    .page-hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .page-hero p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+      max-width: 600px;
+      margin: 0 auto;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .content-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .section-block {
+      background: white;
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .section-block h2 {
+      color: #0052cc;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 3px solid #0052cc;
+      padding-bottom: 1rem;
+    }
+
+    .section-block h3 {
+      color: #1a1a1a;
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .section-block p {
+      color: #666;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .section-block ul {
+      color: #666;
+      line-height: 1.8;
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-block li {
+      margin-bottom: 0.8rem;
+    }
+
+    .highlight-box {
+      background: #f0f4ff;
+      border-left: 4px solid #0052cc;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 5px;
+    }
+
+    .highlight-box strong {
+      color: #0052cc;
+    }
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.pricing-table {
+  width: 100%;
+  min-width: 700px; /* enables horizontal scroll */
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+  table-layout: fixed; /* equal column widths */
+}
+
+.pricing-table th,
+.pricing-table td {
+  padding: 1rem;
+  text-align: left;
+  border: 1px solid #e0e0e0;
+}
+
+.pricing-table th {
+  background: #0052cc;
+  color: white;
+  font-weight: 600;
+}
+
+.pricing-table tr:nth-child(even) {
+  background: #f0f4ff;
+}
+
+    .pricing-package {
+      background: #f8f9fa;
+      border: 2px solid #0052cc;
+      padding: 2rem;
+      border-radius: 10px;
+      margin: 2rem 0;
+    }
+
+    .pricing-package h3 {
+      color: #0052cc;
+      margin-top: 0;
+    }
+
+    .pricing-package-price {
+      font-size: 1.8rem;
+      color: #0052cc;
+      font-weight: 700;
+      margin: 1rem 0;
+    }
+
+    .pricing-package ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .pricing-package li {
+      padding: 0.5rem 0;
+      color: #666;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .pricing-package li:last-child {
+      border-bottom: none;
+    }
+
+    .pricing-package li:before {
+      content: "✓ ";
+      color: #0052cc;
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+
+    .cta-section {
+      background: white;
+      color: #0052cc;
+      padding: 3rem 2rem;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 2rem;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .cta-section h3 {
+      color: #0052cc;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+      color: #666;
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .btn-contact {
+      padding: 1rem 2.5rem;
+      background: #0052cc;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-contact:hover {
+      background: #0041a3;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 82, 204, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .page-hero {
+        padding: 100px 1.5rem 60px;
+      }
+
+      .page-hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .section-block {
+        padding: 1.5rem;
+      }
+
+      .section-block h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://www.nexxchange.com/mp1/images/65b8dabd48f8a600010752d3" alt="Brabant Golf Logo">
+      <span>Brabant Golf</span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="golflessen.html">Lessen</a>
+      <a href="events.html">Evenementen</a>
+      <a href="status.html">Status</a>
+      <a href="pricing.html">Prijzen</a>
+    </nav>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <button class="btn-signin">Sign in</button>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <h1>Golflessen & Opleiding</h1>
+    <p>Leer golfen van professionele instructeurs en behaal je baanpermissie en handicap</p>
+  </section>
+
+  <!-- Content -->
+  <section class="content-container">
+    
+    <div class="section-block">
+      <h2>Golflessen bij Brabant Golf</h2>
+      <p>Als u niet eerder gegolft hebt, bijvoorbeeld bij een andere vereniging, is het noodzakelijk om lessen te nemen. Brabant Golf biedt via haar golf-Pro's lessenpakketten aan waarmee u voor een interessante prijs in korte tijd uw baanpermissie en daarna uw handicap 54 kunt behalen.</p>
+      
+      <p>U kunt ook rechtstreeks contact opnemen met onze golf-Pro, <strong>Martine Oomen</strong>:</p>
+      <ul>
+        <li>📞 Telefoon: 06-21806173</li>
+        <li>✉️ E-mail: info@golfscool.nl</li>
+      </ul>
+
+      <h3>3 Maanden All-In-One Starterspakket</h3>
+      <p>Tijdens het 3 maanden pakket wordt minimaal Stap 1 NGF golfbaanpermissie en theorie-examen gehaald. Golfen leer je niet alleen door lessen op de driving-range - het spelen op de baan en oefenen op de oefenfaciliteiten dragen bij aan verbetering van je golfspel en golfplezier.</p>
+
+      <p><strong>Lessen:</strong> gegeven in groep van 4-6 personen. Bij minder deelnemers geldt hetzelfde bedrag maar minder uren les.</p>
+<div class="table-wrapper">
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Groepsgrootte</th>
+            <th>Uren Les</th>
+            <th>Prijs p.p.</th>
+            <th>Alternatief</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2 – 3 personen</td>
+            <td>8 uur</td>
+            <td><strong>€ 199,00</strong></td>
+            <td>€70,00 per maand</td>
+          </tr>
+          <tr>
+            <td>4 – 6 personen</td>
+            <td>12 uur</td>
+            <td><strong>€ 199,00</strong></td>
+            <td>€70,00 per maand</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p><strong>Inbegrepen in het 3 maanden pakket:</strong></p>
+      <ul>
+        <li>6 uur golfles praktijk (putten, chippen, pitchen, swing en bunker)</li>
+        <li>2 uur baanles aansluitend aan 1 uur praktijkles</li>
+        <li>2 uur theorie in de baan met R&H of in combinatie met de baanlessen pro</li>
+        <li>Theorie-examen afname door R&H commissie</li>
+        <li>Boekje stap 1 van 9 stappenplan NGF</li>
+        <li>Proefaccount www.degolfacademie.nl</li>
+        <li>Gratis driving-range ballen tijdens de lessen</li>
+        <li>3 maanden speelrecht 9-holes baan en gebruik oefenfaciliteiten</li>
+        <li>Deelname aan familiewedstrijden</li>
+      </ul>
+
+      <div class="highlight-box">
+        <strong>Opmerking:</strong> Tot behalen van baanpermissie spelen vanaf family tees na 15:00 uur of met een mentor/buddy van BG. Vanaf behalen NGF Baanpermissie vanaf normale tee.
+      </div>
+
+      <h3>6 Maanden All-In-One Starterspakket</h3>
+      <p>Tijdens het 6 maanden pakket wordt minimaal Stap 2 handicap 54 en het theorie-examen gehaald. Dit pakket is ideaal voor zeer snelle voortgang van totale beginner tot handicap speler.</p>
+
+      <p><strong>Lessen:</strong> gegeven in groep van 4-6 personen. Bij minder deelnemers geldt hetzelfde bedrag maar minder uren les.</p>
+<div class="table-wrapper">
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Groepsgrootte</th>
+            <th>Uren Les</th>
+            <th>Prijs p.p.</th>
+            <th>Alternatief</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2 – 3 personen</td>
+            <td>12 uur</td>
+            <td><strong>€ 350,00</strong></td>
+            <td>€62,50 per maand</td>
+          </tr>
+          <tr>
+            <td>4 – 6 personen</td>
+            <td>22 uur</td>
+            <td><strong>€ 350,00</strong></td>
+            <td>€62,50 per maand</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p><strong>Inbegrepen in het 6 maanden pakket:</strong></p>
+      <ul>
+        <li>8 uur golfles praktijk (putten, chippen, pitchen, swing en bunker)</li>
+        <li>4 x 1 uur baanles aansluitend aan 1 uur praktijkles</li>
+        <li>2 x 1 uur theorie in de baan met R&H of in combinatie met de baanlessen pro</li>
+        <li>Theorie-examen afname door R&H commissie</li>
+        <li>Boekjes stap 1 en 2 van 9 stappenplan NGF</li>
+        <li>Proefaccount www.degolfacademie.nl</li>
+        <li>Gratis driving-range ballen tijdens de lessen</li>
+        <li>6 maanden speelrecht 9-holes baan en gebruik oefenfaciliteiten</li>
+        <li>Deelname aan familiewedstrijden</li>
+      </ul>
+
+      <h3>Trainingsabonnement</h3>
+      <p>Perfect voor leden die hun spel willen verbeteren met professionele begeleiding.</p>
+
+      <div class="pricing-package">
+        <h3>Jaargeldige Trainingsabo</h3>
+        <div class="pricing-package-price">€75,00</div>
+        <ul>
+          <li>2 privé lessen van 25 minuten</li>
+          <li>10 rittenkaart 9-holes</li>
+          <li>Onbeperkt gebruik oefenfaciliteiten inclusief gratis 1 mandje driving-range ballen per strip</li>
+        </ul>
+      </div>
+
+      <h3>Tarieven Privélessen</h3>
+      <p>Voor gerichte coaching en persoonlijke begeleiding:</p>
+<div class="table-wrapper">
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Deelnemers</th>
+            <th>Duur</th>
+            <th>Prijs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1 persoon</td>
+            <td>25 minuten</td>
+            <td><strong>€ 25,00</strong></td>
+          </tr>
+          <tr>
+            <td>1 persoon</td>
+            <td>50 minuten</td>
+            <td><strong>€ 45,00</strong></td>
+          </tr>
+          <tr>
+            <td>2 personen</td>
+            <td>50 minuten</td>
+            <td><strong>€ 55,00</strong></td>
+          </tr>
+          <tr>
+            <td>3 personen</td>
+            <td>50 minuten</td>
+            <td><strong>€ 60,00</strong></td>
+          </tr>
+          <tr>
+            <td>4 personen</td>
+            <td>50 minuten</td>
+            <td><strong>€ 65,00</strong></td>
+          </tr>
+          <tr>
+            <td>5 personen</td>
+            <td>50 minuten</td>
+            <td><strong>€ 70,00</strong></td>
+          </tr>
+          <tr>
+            <td>6 personen</td>
+            <td>50 minuten</td>
+            <td><strong>€ 75,00</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3>Aanwezigheid & Contact</h3>
+      <p><strong>Martine Oomen is beschikbaar op:</strong></p>
+      <ul>
+        <li><strong>Dinsdag</strong></li>
+        <li><strong>Zaterdag</strong></li>
+        <li><strong>Zondagochtend</strong></li>
+        <li>Andere dagen eventueel mogelijk op afspraak</li>
+      </ul>
+
+      <div class="highlight-box">
+        <strong>📞 Contact Martine Oomen:</strong><br>
+        Telefoon: 06-21806173<br>
+        E-mail: info@golfscool.nl<br><br>
+        Voor meer informatie over de lespakketten of andere lesmogelijkheden kun je altijd contact opnemen!
+      </div>
+
+      <h3>Kwalificaties & Achtergrond</h3>
+      <p>Martine Oomen is een ervaren golf instructeur met professionele kwalificaties:</p>
+      <ul>
+        <li>Jeugdcoach (KSS Level 1)</li>
+        <li>Talentcoach (KSS Level 2)</li>
+        <li>Golf Instructeur (KSS Level 2 / C Professional)</li>
+      </ul>
+
+      <p>Martine staat klaar om je te helpen je golfskills te verbeteren en je doelen te bereiken, of je nu beginner bent of al wat ervaring hebt!</p>
+    </div>
+
+    <div class="cta-section">
+      <h3>Klaar om te beginnen?</h3>
+      <p>Neem contact op met Martine voor meer informatie over lessen, clinics of groepstrainingen!</p>
+      <button class="btn-contact" onclick="alert('Bel Martine: 06-21806173 of mail: info@golfscool.nl')">Contact Martine</button>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Brabant Golf</h4>
+        <p>Leer golfen op onze gezellige 9-holes baan met lage bijdrages en geen financiële participatie.</p>
+        <div class="social-links">
+          <a href="#">&copy; 2026 Brabant Golf. Golf hoeft niet duur te zijn!</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Snelle Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Evenementen</a></li>
+          <li><a href="status.html">Status</a></li>
+          <li><a href="pricing.html">Prijzen</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="golflessen.html">Golflessen</a></li>
+          <li><a href="wedstrijden.html">Wedstrijden</a></li>
+          <li><a href="about.html">Over Ons</a></li>
+          <li><a href="pricing.html">Lidmaatschappen</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Statenlaan 18, 5121 HD Rijen</p>
+        <p>0161-220076</p>
+        <p>bestuur@brabantgolf.nl</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Voor informatie bel het clubhuis tussen 11.00 en 16.00 uur: 0161-220076.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brabant Golf</title>
+  <link rel="icon" href="https://www.nexxchange.com/mp1/images/65b8dabd48f8a600010752d3" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .page-hero {
+      position: relative;
+      background: url('https://www.brabantgolf.nl/wp-content/uploads/2020/07/cropped-Hole-3-in-het-zonnetje-scaled-1.jpg') center/cover no-repeat;
+      color: white;
+      padding: 120px 3rem 80px;
+      text-align: center;
+      margin-top: 80px;
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .page-hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .page-hero p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+      max-width: 600px;
+      margin: 0 auto;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .content-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .section-block {
+      background: white;
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .section-block h2 {
+      color: #0052cc;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 3px solid #0052cc;
+      padding-bottom: 1rem;
+    }
+
+    .section-block h3 {
+      color: #1a1a1a;
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .section-block p {
+      color: #666;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .section-block ul {
+      color: #666;
+      line-height: 1.8;
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-block li {
+      margin-bottom: 0.8rem;
+    }
+
+    .competition-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .competition-card {
+      background: #f8f9fa;
+      border: 2px solid #0052cc;
+      padding: 2rem;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .competition-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0, 82, 204, 0.15);
+    }
+
+    .comp-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .comp-icon {
+      font-size: 2.5rem;
+      margin-right: 1rem;
+    }
+
+    .competition-card h3 {
+      color: #0052cc;
+      font-size: 1.3rem;
+      margin: 0;
+    }
+
+    .comp-frequency {
+      color: #0041a3;
+      font-weight: bold;
+      font-size: 0.9rem;
+      margin-top: 0.3rem;
+    }
+
+    .competition-card p {
+      color: #666;
+      margin: 1rem 0;
+      line-height: 1.6;
+    }
+
+    .comp-details {
+      background: #f0f4ff;
+      padding: 1rem;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 1rem;
+    }
+
+    .comp-details strong {
+      color: #0052cc;
+    }
+
+    .highlight-box {
+      background: #f0f4ff;
+      border-left: 4px solid #0052cc;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 5px;
+    }
+
+    .highlight-box strong {
+      color: #0052cc;
+    }
+
+    .cta-section {
+      background: white;
+      color: #0052cc;
+      padding: 3rem;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 2rem;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .cta-section h3 {
+      color: #0052cc;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+      color: #666;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+
+    .btn-white {
+      background: #0052cc;
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn-white:hover {
+      background: #0041a3;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0, 82, 204, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .page-hero {
+        padding: 100px 1.5rem 60px;
+      }
+
+      .page-hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .competition-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .section-block {
+        padding: 1.5rem;
+      }
+
+      .section-block h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://www.nexxchange.com/mp1/images/65b8dabd48f8a600010752d3" alt="Brabant Golf Logo">
+      <span>Brabant Golf</span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="golflessen.html">Lessen</a>
+      <a href="events.html">Evenementen</a>
+      <a href="status.html">Status</a>
+      <a href="pricing.html">Prijzen</a>
+    </nav>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <button class="btn-signin">Sign in</button>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <h1>Wedstrijden & Competities</h1>
+    <p>Doen meenemen aan onze regelmatige tournaments en evenementen</p>
+  </section>
+
+  <!-- Content -->
+  <section class="content-container">
+    
+    <div class="section-block">
+      <h2>Competities bij Brabant Golf</h2>
+      <p>Brabant Golf organiseert regelmatig verschillende competities en toernooien voor al onze leden. Of je nu beginner bent of al wat meer ervaring hebt, er is altijd iets te spelen!</p>
+
+      <div class="competition-cards">
+        <div class="competition-card">
+          <div class="comp-header">
+            <div class="comp-icon">🏆</div>
+            <div>
+              <h3>Maandbeker</h3>
+              <div class="comp-frequency">Maandelijks</div>
+            </div>
+          </div>
+          <p>De Maandbeker is onze populairste wedstrijd. Een gezellige competitie waarin je tegen andere spelers speelt en punten verzamelt.</p>
+          <div class="comp-details">
+            <strong>Deelname:</strong> Gratis voor leden<br>
+            <strong>Frequentie:</strong> Eenmaal per maand<br>
+            <strong>Potje:</strong> €5,- (optioneel)<br>
+            <strong>Inschrijving:</strong> Bij secretaris of via app
+          </div>
+        </div>
+
+        <div class="competition-card">
+          <div class="comp-header">
+            <div class="comp-icon">⛳</div>
+            <div>
+              <h3>Inloopochtend</h3>
+              <div class="comp-frequency">Wekelijks</div>
+            </div>
+          </div>
+          <p>Een avondwedstrijdje in vogelvrij tempo zonder vaste starttijd. Perfekt voor spelers die graag casual willen spelen met wat vriendelijke competitie.</p>
+          <div class="comp-details">
+            <strong>Deelname:</strong> Gratis voor leden<br>
+            <strong>Frequentie:</strong> Wekelijks<br>
+            <strong>Speeltijd:</strong> Flexibel, vogelvrij<br>
+            <strong>Favoriet van:</strong> Beginners & casual spelers
+          </div>
+        </div>
+
+        <div class="competition-card">
+          <div class="comp-header">
+            <div class="comp-icon">👑</div>
+            <div>
+              <h3>Kampioenschappen</h3>
+              <div class="comp-frequency">Jaarlijks</div>
+            </div>
+          </div>
+          <p>Ons jaarlijkse kampioenschap waar de beste golfers van Brabant Golf tegen elkaar strijden om de titel. Een professioneel georganiseerde wedstrijd met mooie prijzen.</p>
+          <div class="comp-details">
+            <strong>Speelformat:</strong> Matchplay & Strokeplay<br>
+            <strong>Periode:</strong> Juni - September<br>
+            <strong>Inschrijving:</strong> Gericht vóór 1 mei<br>
+            <strong>Prijzen:</strong> Ja! Prachtige trofeeën
+          </div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <strong>💡 Tip:</strong> Wil je deelnemen aan een competitie? Neem contact op met onze secretaris of kijk op onze clubkamer bulletin board voor aanmeldingsformulieren en meer informatie over komende wedstrijden.
+      </div>
+
+      <h3>Handicap en Speelklassen</h3>
+      <p>Bij Brabant Golf rekenen we met handicaps en speelklassen om eerlijke competitie voor iedereen te waarborgen:</p>
+      <ul>
+        <li><strong>Speelklasse A (HCP 0-3):</strong> Voor ervaren golferspelers</li>
+        <li><strong>Speelklasse B (HCP 4-10):</strong> Voor gemiddelde golferspelers</li>
+        <li><strong>Speelklasse C (HCP 11+):</strong> Voor beginners en spelers in opbouw</li>
+        <li><strong>Beginners (HCP 54):</strong> Net je golfbaanpermvisie gehaald? Meedoen!</li>
+      </ul>
+
+      <h3>Toernooien & Gastspeelkansen</h3>
+      <p>Naast onze eigen competities organiseren we ook gastspeelkansen en word je regelmatig uitgenodigd voor toernooien bij vriendenschappelijke banen:</p>
+      <ul>
+        <li>Vriendschappelijke interclub wedstrijden met nabijgelegen clubs</li>
+        <li>Gastspeeltoernooien (soms met korting voor leden)</li>
+        <li>Regionale en nationale toernooien (voor wie interesse heeft)</li>
+        <li>Gezelschapswedstrijdjes (bedrijfsgroepen, families, etc.)</li>
+      </ul>
+
+      <h3>Speelregels & Etiquette</h3>
+      <p>Om ervoor te zorgen dat iedereen plezier heeft op de baan, hanteren we enkele basisregels:</p>
+      <ul>
+        <li>Speel vogelvrij tempo (ca. 1,5 uur voor 9 holes)</li>
+        <li>Respecteer andere spelers en de baan</li>
+        <li>Repareer je pitchmarks en divots</li>
+        <li>Volg de speelregels van de R&A Golf Union van Nederland</li>
+      </ul>
+
+      <div class="highlight-box">
+        <strong>🎯 Onthouden:</strong> Golf is een spel van integriteit. We spelen volgens eer, we zijn eerlijk en we helpen zich aan elkaar. Dat is de Brabant Golf mentaliteit!
+      </div>
+
+      <h3>Resultaten & Ranking</h3>
+      <p>Alle resultaten van competities worden bijgehouden en gerangschikt. Op deze manier kunnen leden zien hoe ze ervoor staan en welke spelers het besten presteren. Onze ranking wordt regelmatig vernieuwd.</p>
+
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+      <h3>Klaar om te Competeren?</h3>
+      <p>Meld je aan voor onze volgende wedstrijd en meet je krachten met andere golfspelers van Brabant Golf!</p>
+      <button class="btn-white" onclick="alert('Contact secretaris: bestuur@brabantgolf.nl of bel 0161-220076')">Inschrijven</button>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Brabant Golf</h4>
+        <p>Leer golfen op onze gezellige 9-holes baan met lage bijdrages en geen financiële participatie.</p>
+        <div class="social-links">
+          <a href="#">&copy; 2026 Brabant Golf. Golf hoeft niet duur te zijn!</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Snelle Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Evenementen</a></li>
+          <li><a href="status.html">Status</a></li>
+          <li><a href="pricing.html">Prijzen</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="golflessen.html">Golflessen</a></li>
+          <li><a href="wedstrijden.html">Wedstrijden</a></li>
+          <li><a href="about.html">Over Ons</a></li>
+          <li><a href="pricing.html">Lidmaatschappen</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Statenlaan 18, 5121 HD Rijen</p>
+        <p>0161-220076</p>
+        <p>bestuur@brabantgolf.nl</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Voor informatie bel het clubhuis tussen 11.00 en 16.00 uur: 0161-220076.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

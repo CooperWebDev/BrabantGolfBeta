@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brabant Golf</title>
+  <link rel="icon" href="https://www.nexxchange.com/mp1/images/65b8dabd48f8a600010752d3" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Pricing Page Specific Styles */
+    .page-hero {
+      position: relative;
+      color: white;
+      padding: 120px 3rem 80px;
+      text-align: center;
+      margin-top: 80px;
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .page-hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .page-hero p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .pricing-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .pricing-section {
+      margin-bottom: 4rem;
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .pricing-section h2 {
+      font-size: 2rem;
+      color: #1a1a1a;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 3px solid #0052cc;
+    }
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.pricing-table {
+  width: 100%;
+  min-width: 800px;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+  table-layout: fixed;
+}
+
+    .pricing-table th {
+      background: #0052cc;
+      color: white;
+      padding: 1.5rem;
+      text-align: left;
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .pricing-table td {
+      padding: 1.5rem;
+      border-bottom: 1px solid #eee;
+      color: #333;
+    }
+
+    .pricing-table tbody tr:hover {
+      background: #f0f4ff;
+      transition: background 0.3s ease;
+    }
+
+    .pricing-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .table-group-header {
+      background: #f0f4ff;
+      font-weight: 700;
+      color: #0052cc;
+      padding: 1.5rem !important;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.95rem;
+    }
+
+    .currency {
+      color: #0052cc;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .note {
+      background: #f8f9fa;
+      color: #666;
+      padding: 1.5rem;
+      border-left: 4px solid #0052cc;
+      border-radius: 5px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-top: -1rem;
+    }
+
+    .highlight-row {
+      background: #f0f4ff;
+    }
+
+    .highlight-row td {
+      font-weight: 600;
+      color: #0052cc;
+    }
+
+    .greenfee-section {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .greenfee-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .greenfee-card {
+      background: #f0f4ff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      border-left: 4px solid #0052cc;
+      transition: all 0.3s ease;
+    }
+
+    .greenfee-card:hover {
+      background: #e8ecff;
+      transform: translateY(-5px);
+    }
+
+    .greenfee-card h4 {
+      color: #0052cc;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .greenfee-card p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .price-highlight {
+      display: block;
+      font-size: 1.5rem;
+      color: #0052cc;
+      font-weight: 800;
+      margin-top: 0.5rem;
+    }
+
+    .contact-cta {
+      text-align: center;
+      margin-top: 4rem;
+      padding: 3rem 2rem;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 30px rgba(0, 82, 204, 0.1);
+      color: #1a1a1a;
+    }
+
+    .contact-cta h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #0052cc;
+    }
+
+    .contact-cta p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: #666;
+    }
+
+    .btn-contact {
+      padding: 1rem 2.5rem;
+      background: #0052cc;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-contact:hover {
+      transform: translateY(-3px);
+      background: #0041a3;
+      box-shadow: 0 10px 25px rgba(0, 82, 204, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .page-hero {
+        padding: 100px 1.5rem 60px;
+      }
+
+      .page-hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .pricing-table {
+        font-size: 0.9rem;
+      }
+
+      .pricing-table th,
+      .pricing-table td {
+        padding: 1rem;
+      }
+
+      .pricing-section h2 {
+        font-size: 1.5rem;
+      }
+
+      .greenfee-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://www.nexxchange.com/mp1/images/65b8dabd48f8a600010752d3" alt="Brabant Golf Logo">
+      <span>Brabant Golf</span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="golflessen.html">Lessen</a>
+      <a href="events.html">Evenementen</a>
+      <a href="status.html">Status</a>
+      <a href="pricing.html">Prijzen</a>
+    </nav>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <button class="btn-signin">Sign in</button>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <h1>Prijzen</h1>
+    <p>Transparante en competitieve ledenschapskosten</p>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing-container">
+    
+    <!-- A-Lid Section -->
+    <div class="pricing-section">
+      <h2>A-lid (Braband Golf is je Homeclub)</h2>
+      <div class="table-wrapper">
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Lidmaatschapsvorm</th>
+            <th>Clubcontributie</th>
+            <th>Speelrecht</th>
+            <th>Totaal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Volwassene (21 jaar en ouder)</td>
+            <td><span class="currency">€55</span></td>
+            <td><span class="currency">€345</span></td>
+            <td><span class="currency">€400</span></td>
+          </tr>
+          <tr>
+            <td>Studenten (21 t/m 27 jaar)</td>
+            <td><span class="currency">€25</span></td>
+            <td><span class="currency">€85</span></td>
+            <td><span class="currency">€110</span></td>
+          </tr>
+          <tr>
+            <td>Jeugdleden (t/m 20 jaar)</td>
+            <td><span class="currency">€25</span></td>
+            <td><span class="currency">€85</span></td>
+            <td><span class="currency">€110</span></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <!-- B-Lid Section -->
+    <div class="pricing-section">
+      <h2>B-lid (Brabant Golf is je tweede club)</h2>
+      <div class="table-wrapper">
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Lidmaatschapsvorm</th>
+            <th>Clubcontributie</th>
+            <th>Speelrecht</th>
+            <th>Totaal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Volwassene (21 jaar en ouder)</td>
+            <td><span class="currency">€45</span></td>
+            <td><span class="currency">€195</span></td>
+            <td><span class="currency">€240</span></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="note">
+        <strong>💡 Opmerking:</strong> B-leden betalen zowel bij Brabant Golf als bij hun Homeclub een NGF bijdrage. De bijdrage bij Brabant Golf is hierdoor €10 lager.
+      </div>
+    </div>
+
+    <!-- G-Lid Section -->
+    <div class="pricing-section">
+      <h2>G-lid (Greenfee-lid, Brabant Golf is je Homeclub)</h2>
+      <div class="table-wrapper">
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Lidmaatschapsvorm</th>
+            <th>Clubcontributie</th>
+            <th>Speelrecht</th>
+            <th>Totaal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Volwassene (21 jaar en ouder)</td>
+            <td><span class="currency">€55</span></td>
+            <td>Greenfee</td>
+            <td>Variabel</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="note">
+        <strong>💡 Opmerking:</strong> In het bedrag zit ook NGF bijdrage en handicapregistratie.
+      </div>
+    </div>
+
+    <!-- Greenfee Section -->
+    <div class="pricing-section">
+      <div class="greenfee-section">
+        <h2>Greenfee Tarieven</h2>
+        <div class="greenfee-grid">
+          <div class="greenfee-card">
+            <h4>Dagkaart</h4>
+            <p>18 holes met unlimited play</p>
+            <span class="price-highlight">€30,00</span>
+          </div>
+          <div class="greenfee-card">
+            <h4>9-holes Ronde</h4>
+            <p>Elke dag van de week beschikbaar</p>
+            <span class="price-highlight">€17,50</span>
+          </div>
+          <div class="greenfee-card">
+            <h4>10 Stripenkaart 18H</h4>
+            <p>Economisch voordeel 83% korting</p>
+            <span class="price-highlight">€250,00</span>
+          </div>
+          <div class="greenfee-card">
+            <h4>10 Stripenkaart 9H</h4>
+            <p>Economisch voordeel 85% korting</p>
+            <span class="price-highlight">€150,00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact CTA -->
+    <div class="contact-cta">
+      <h3>Vragen over ons prijsschema?</h3>
+      <p>Neem contact met ons op voor meer informatie over lidmaatschap of speciale aanbiedingen</p>
+      <button class="btn-contact">Contact Opnemen</button>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Brabant Golf</h4>
+        <p>Leer golfen op onze gezellige 9-holes baan met lage bijdrages en geen financiële participatie.</p>
+        <div class="social-links">
+          <a href="#">&copy; 2026 Brabant Golf. Golf hoeft niet duur te zijn!</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Snelle Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Evenementen</a></li>
+          <li><a href="status.html">Status</a></li>
+          <li><a href="pricing.html">Prijzen</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="golflessen.html">Golflessen</a></li>
+          <li><a href="wedstrijden.html">Wedstrijden</a></li>
+          <li><a href="about.html">Over Ons</a></li>
+          <li><a href="pricing.html">Lidmaatschappen</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Statenlaan 18, 5121 HD Rijen</p>
+        <p>0161-220076</p>
+        <p>bestuur@brabantgolf.nl</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Voor informatie bel het clubhuis tussen 11.00 en 16.00 uur: 0161-220076.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
